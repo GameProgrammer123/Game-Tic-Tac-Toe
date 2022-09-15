@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel="stylesheet" href="tic_tac_toe.css" />
+<script type="text/javascript">
+var url_string = window.location.href;
+console.log(url_string);
+var url = new URL(url_string);
+var nmax = parseInt(url.searchParams.get("maxNumberFields"));
+var startGame = url.searchParams.get("newGame");
+if(startGame === null) startGame = 'Player';
+if(isNaN(nmax)) nmax = 3;
+var X, O;
+var signPlayer = url.searchParams.get("sign");
+// console.log('sinPlayer '+sinPlayer);
+if(signPlayer === null){ X = 'X'; O = 'O'; }
+else if (signPlayer === 'cricle' ) { X = 'X'; O = 'O'; }
+	 else { X = 'O'; O = 'X'; }
+</script>
+<script type="text/javascript" src="engine3.js"></script>
+</head>
+<body>
+<div class="options-of-game" id="optionsgame">
+<form action='tic_tac_toe.html'>
+<fieldset>
+<legend>Game settings:</legend>
+<label for="sizeBoard">Choose the size of the board:</label>
+  <select name="maxNumberFields" id="maxNumberFields">
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select><br />
+<input type="radio" id="signcircle" name="sign" value="cricle" checked>
+<label for="signcircle">O</label>
+<input type="radio" id="signcross" name="sign" value="cross">
+<label for="signcross">X</label><br />
+<input type="submit" name="newGame" value="Player">
+<input type="submit" name="newGame" value="Computer">
+</fieldset>
+</form>
+<div class="descriptionSettingsGame">Game description settings:<br>
+<div class="singPlayer">Player Mark: <script>document.write(O)</script></div>
+<div class="singComputer">Computer Mark: <script>document.write(X)</script></div>
+<div class="sizeBoard">Board Size: <script>document.write(nmax)</script></div>
+<div class="theFirstMove">The first starts the game: <script>document.write(startGame)</script></div>
+</div>
+</div>
+<div class="board-of-game" id="boardgame"></div>
+<script type="text/javascript" src="board.js"></script>
+</body>
+</html>

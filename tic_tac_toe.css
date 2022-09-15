@@ -1,0 +1,41 @@
+div.board-of-game {
+	border: 1px solid #000000;
+	position: absolute; 
+	width: 48%; height: 98%;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	font-size: xxx-large;
+    font-family: cursive;
+}
+div.options-of-game {
+	border: 1px solid #000000;
+	position: relative; 
+	width: 48%; height: 100%;
+	float: right;
+	text-align: center;
+	vertical-align: middle;
+	font-size: xxx-large;
+    font-family: cursive;
+}
+p.circle{
+  /* height: 100%;
+  width: 100%; */
+  text-align: center;
+}
+select {
+  width: 10%;
+  padding-top:10px;
+  border-radius:10px;
+  top: 10%;
+  position: relative;
+  
+}
+label {
+  display:inline;
+  margin-bottom: 2px;
+  position: relative; /* to contain absolute elements */
+  text-align: center; /* free space for custom radio button */
+  cursor: pointer;
+  top: 5%;
+}
