@@ -91,18 +91,26 @@ function smallsquare(num,fieldMax){
    /* elemsquare.onmouseover = function(){ funkcja1(this.id); }
    elemsquare.onmouseout = function(){ funkcja2(this.id); } */
    elemsquare.onclick = function(){
+	if(document.getElementById(this.id).textContent === '' && Wyg(gra,X) !== true && zajete_pola < nmax * nmax){
 	document.getElementById(this.id).innerHTML = '<p class="circle" id="'+'p'+this.id+'">'+O+'</p>';
 	var TagPId = 'p'+this.id; numberTagP = numberTagP + 1;
 	Wspolrzedne(this.id,obj2);
 	gra[obj2.wsp_y][obj2.wsp_x] = O;
 	zajete_pola = zajete_pola + 1;
+	insertSign(TagPId,this.id);
+	if(zajete_pola < nmax * nmax){
 	tpol.length = 0;
 	bestMove(gra,zajete_pola);
 	zajete_pola = zajete_pola + 1;
 	/* WidthDiv = document.getElementById(1).clientWidth;
 	heightDiv = document.getElementById(1).clientHeight; */
-	insertSign(TagPId,this.id);
 	graphicWin();
+	}
+	} else
+		if (document.getElementById(this.id).textContent !== '' && Wyg(gra,X) !== true && zajete_pola < nmax * nmax) alert('Field filled')
+		else
+			if (zajete_pola === nmax * nmax && Wyg(gra,X) !== true) alert('It\'s draw !!!')
+			else alert('It\'s win: '+X+' !!!');
    }
    elemsquare.style.position = 'absolute';
    elemsquare.style.left = edgespace + mleft+'%';
