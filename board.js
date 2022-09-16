@@ -109,8 +109,8 @@ function smallsquare(num,fieldMax){
 	} else
 		if (document.getElementById(this.id).textContent !== '' && Wyg(gra,X) !== true && zajete_pola < nmax * nmax) alert('Field filled')
 		else
-			if (zajete_pola === nmax * nmax && Wyg(gra,X) !== true) alert('It\'s draw !!!')
-			else alert('It\'s win: '+X+' !!!');
+			if (zajete_pola === nmax * nmax && Wyg(gra,X) !== true) alert('Draw !!!')
+			else alert('WON: '+X+' !!!');
    }
    elemsquare.style.position = 'absolute';
    elemsquare.style.left = edgespace + mleft+'%';
