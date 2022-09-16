@@ -60,19 +60,6 @@ function graphicWin(){
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 function smallsquare(num,fieldMax){
   var numsquare = 0, mleft = 0, mtop = 0;
   for(var j = 0; j < fieldMax; ++j){
