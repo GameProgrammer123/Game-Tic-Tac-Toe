@@ -15,18 +15,15 @@ var signPlayer = url.searchParams.get("sign");
 if(signPlayer === null){ X = 'X'; O = 'O'; }
 else if (signPlayer === 'cricle' ) { X = 'X'; O = 'O'; }
 	 else { X = 'O'; O = 'X'; }
-var gLavel = url.searchParams.get("level");
-console.log('gLavel',gLavel);
-if (gLavel === null) gLavel = 'possible';
-var gameLevel;
-if (gLavel === 'possible') gameLevel = 1
-else gameLevel = 2;
+var gameLevel = url.searchParams.get("level");
+console.log('gameLevel',gameLevel);
+if (gameLevel === null) gameLevel = 'possible';
 </script>
 <script type="text/javascript" src="engineox.js"></script>
 </head>
 <body>
 <div class="options-of-game" id="optionsgame">
-<form action='tic-tac-toe.html'>
+<form action='tic_tac_toe.html'>
 <fieldset>
 <legend>Game settings form:</legend>
 <label for="sizeBoard">Choose the size of the board:</label>

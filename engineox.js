@@ -69,7 +69,7 @@ var
       else
           if (Wyg(tablica_gry,O) === true){ return -1; }
           else
-              if ((ilosc_zajetych_pol === (nmax*nmax)) || (deep === 4 && nmax > 3) || (deep === gameLevel && gameLevel === 1)){ return 0; }
+              if ((ilosc_zajetych_pol === (nmax*nmax)) || (deep === 4 && nmax > 3) || (deep === 1 && gameLevel === 'possible')){ return 0; }
               else
                 if (obj.zatrzymanie === false){
 					if (znak_gracza === X) znak_gracza = O 
@@ -86,7 +86,7 @@ var
 						
 						m = MiniMax(tablica_gry,znak_gracza,ilosc_zajetych_pol+1,deep+1,alfa,beta,obj);
 						
-						if ((deep === 4 && nmax > 3) || (deep === gameLevel &&  gameLevel === 1)) obj.zatrzymanie = true;
+						if ((deep === 4 && nmax > 3) || (deep === 1 &&  gameLevel === 'possible')) obj.zatrzymanie = true;
 						tablica_gry[fi][fj] = null;
 						if (znak_gracza === X){
 						if (mmx < m){ 
