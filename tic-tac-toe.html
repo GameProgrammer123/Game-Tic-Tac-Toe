@@ -1,0 +1,62 @@
+<html>
+<head>
+<link rel="stylesheet" href="tic_tac_toe.css" />
+<script type="text/javascript">
+var url_string = window.location.href;
+console.log(url_string);
+var url = new URL(url_string);
+var nmax = parseInt(url.searchParams.get("maxNumberFields"));
+var startGame = url.searchParams.get("newGame");
+if(startGame === null) startGame = 'Player';
+if(isNaN(nmax)) nmax = 3;
+var X, O;
+var signPlayer = url.searchParams.get("sign");
+// console.log('sinPlayer '+sinPlayer);
+if(signPlayer === null){ X = 'X'; O = 'O'; }
+else if (signPlayer === 'cricle' ) { X = 'X'; O = 'O'; }
+	 else { X = 'O'; O = 'X'; }
+var gLavel = url.searchParams.get("level");
+console.log('gLavel',gLavel);
+if (gLavel === null) gLavel = 'possible';
+var gameLevel;
+if (gLavel === 'possible') gameLevel = 1
+else gameLevel = 2;
+</script>
+<script type="text/javascript" src="engineox.js"></script>
+</head>
+<body>
+<div class="options-of-game" id="optionsgame">
+<form action='tic_tac_toe.html'>
+<fieldset>
+<legend>Game settings form:</legend>
+<label for="sizeBoard">Choose the size of the board:</label>
+  <select name="maxNumberFields" id="maxNumberFields">
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select><br />
+<input type="radio" id="signcircle" name="sign" value="cricle" checked="checked">
+<label for="signcircle">O</label>
+<input type="radio" id="signcross" name="sign" value="cross">
+<label for="signcross">X</label><br />
+<label for="level">Game level:</label>
+<select name="level" id="level">
+    <option value="possible">possible</option>
+    <option value="impossible">impossible</option>
+</select>
+<input type="submit" name="newGame" value="Player">
+<input type="submit" name="newGame" value="Computer">
+</fieldset>
+</form>
+<div class="descriptionSettingsGame">Description settings game:<br>
+<p class="singPlayer">Player Mark: <script>document.write(O)</script></p>
+<p class="singComputer">Computer Mark: <script>document.write(X)</script></p>
+<p class="sizeBoard">Board Size: <script>document.write(nmax)</script></p>
+<p class="gamelevel">Game level: <script>document.write(gLavel)</script></p>
+<p class="theFirstMove">The first starts the game: <script>document.write(startGame)</script></p>
+</div>
+</div>
+<div class="board-of-game" id="boardgame"></div>
+<script type="text/javascript" src="boardox.js"></script>
+</body>
+</html>
