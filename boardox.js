@@ -174,7 +174,7 @@ setTimeout(() => {
 drawBoard(nmax);
 
 
-if(startGame === 'Computer'){
+if(startGame === 'First start computer'){
   console.log('First Computer');
   bestMove(gra,zajete_pola);
   zajete_pola = 1;
@@ -183,7 +183,7 @@ if(startGame === 'Computer'){
 	 console.log('First Player');
    }
 
-
+document.getElementsByClassName('containerform')[0].style.visibility = 'hidden';
 
 window.addEventListener('resize',getElementsSize);
 

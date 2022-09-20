@@ -7,7 +7,7 @@ console.log(url_string);
 var url = new URL(url_string);
 var nmax = parseInt(url.searchParams.get("maxNumberFields"));
 var startGame = url.searchParams.get("newGame");
-if(startGame === null) startGame = 'Player';
+if(startGame === null) startGame = 'First start player';
 if(isNaN(nmax)) nmax = 3;
 var X, O;
 var signPlayer = url.searchParams.get("sign");
@@ -23,28 +23,36 @@ if (gameLevel === null) gameLevel = 'possible';
 </head>
 <body>
 <div class="options-of-game" id="optionsgame">
+<div class="buttons">
+<input type="submit" name="playagain" class="button" value="Play again" style="font-size: x-large;" onclick="window.location.reload()" />
+<input type="submit" name="change settings" class="button" value="Change game settings" style="font-size: x-large;" onclick="if(document.getElementsByClassName('containerform')[0].style.visibility === 'hidden') document.getElementsByClassName('containerform')[0].style.visibility = 'visible'
+else document.getElementsByClassName('containerform')[0].style.visibility =  'hidden';" /></div>
+<div class="containerform">
 <form action='tic-tac-toe.html'>
 <fieldset>
 <legend>Game settings form:</legend>
+<div class ="elementsform">
 <label for="sizeBoard">Choose the size of the board:</label>
   <select name="maxNumberFields" id="maxNumberFields">
     <option value="3">3</option>
     <option value="4">4</option>
     <option value="5">5</option>
-  </select><br />
+  </select><br /><label for="playermark">Choose your mark:</label>
 <input type="radio" id="signcircle" name="sign" value="cricle" checked="checked">
-<label for="signcircle">O</label>
+<label for="signcircle">O or</label>
 <input type="radio" id="signcross" name="sign" value="cross">
 <label for="signcross">X</label><br />
 <label for="level">Game level:</label>
 <select name="level" id="level">
     <option value="possible">possible</option>
     <option value="impossible">impossible</option>
-</select>
-<input type="submit" name="newGame" value="Player">
-<input type="submit" name="newGame" value="Computer">
+</select><br />
+<input type="submit" name="newGame" value="First start player" style="margin-top: 2.5%;">
+<input type="submit" name="newGame" value="First start computer" style="margin-top: 2.5%;">
+</div>
 </fieldset>
 </form>
+</div>
 <div class="descriptionSettingsGame">Description settings game:<br>
 <p class="singPlayer">Player Mark: <script>document.write(O)</script></p>
 <p class="singComputer">Computer Mark: <script>document.write(X)</script></p>
