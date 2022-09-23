@@ -112,3 +112,19 @@ p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove{
 	text-align: center;
     width: auto;
 }
+div.gameover{
+	top: 0;
+    left: 0;
+    width: 48.7%;
+    height: 100.7%;
+    position: relative;
+    background-color: transparent;
+    border: 1px solid black;
+	text-align: center;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	font-size: xxx-large;
+    font-family: cursive;
+    visibility: hidden;
+}

@@ -27,15 +27,30 @@ function graphicWin(){
 			numberField = Nr_Wezla(wi,wj);
 			// alert('row :'+numberField);
 			document.getElementById(numberField).style.color = 'red';
+			setTimeout(function(){
+			document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
+			if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON COMPUTER !!!</span></p>';
+			if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON PLAYER !!!</span></p>';
+			document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},5000);
 			}
 		   } else if (nr_kolumny === wj && nr_wiersza === null){
 			        if(wj === nr_kolumny){
 			        numberField = Nr_Wezla(wi,wj);
 					// alert('col :'+numberField);
 			        document.getElementById(numberField).style.color = 'red';
+					setTimeout(function(){
+					document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
+					if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON COMPUTER !!!</span></p>';
+					if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON PLAYER !!!</span></p>';
+					document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},5000);
 					}
 		          }
-		 }
+		 } else if(zajete_pola === nmax * nmax){
+				setTimeout(function(){
+			    document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
+				document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>DRAW !!!</span></p>';
+				document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},5000);
+				}
         }
 	  }
 	 if(wi < nmax && wj === nmax){
@@ -47,15 +62,30 @@ function graphicWin(){
         numberField = Nr_Wezla(wi,wi);
 	    // alert('przekatna1: '+numberField);
 	    document.getElementById(numberField).style.color = 'red';
+		setTimeout(function(){
+		document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
+		if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON COMPUTER !!!</span></p>';
+		if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON PLAYER !!!</span></p>';
+		document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},5000);
 	   } else if (nr_wiersza === nmax && nr_kolumny === -1){
 			   // alert('/');
 		      // if(wi + wj === nmax - 1){
                   numberField = Nr_Wezla(wi,wj-wi);
 				  // alert('przekatna2: '+numberField);
 				  document.getElementById(numberField).style.color = 'red';
+				  setTimeout(function(){
+				  document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
+				  if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON COMPUTER !!!</span></p>';
+				  if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON PLAYER !!!</span></p>';
+				  document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},5000);
 		       // }
 	          }
-	  }
+	  } else  if(zajete_pola === nmax * nmax){
+		        setTimeout(function(){
+			    document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
+				document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>DRAW !!!</span></p>';
+				document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},5000);
+				}
 	 }
     }
 }
