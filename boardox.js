@@ -164,13 +164,13 @@ function drawBoard(sizemax){
 	numbersquare = numbersquare + 1;
 	}
 }
-function middleOfElement(numberID){
-// console.log(heightDiv+' i '+heightP);
-var elementDiv = document.getElementById(numberID);
-if(widthDiv >= heightDiv) elementDiv.style.top = ((50/100)*widthDiv) - (heightDiv/2)  + 'px'
-else elementDiv.style.top = ((50/100)*heightDiv) - (widthDiv/2)  + 'px';
-var variable = elementDiv.style.top;
-console.log('variable: '+variable);
+
+function middleOfElement(ClassName1,ClassName2,numInd1,numInd2){
+var heightDiv = document.getElementsByClassName(ClassName1)[numInd1].clientHeight;
+var heightP = document.getElementsByClassName(ClassName2)[numInd2].clientHeight;
+if(heightDiv > heightP) document.getElementsByClassName(ClassName2)[numInd2].style.top = ((50/100)*heightDiv) - (heightP/2)  + 'px'
+else if(heightDiv === heightP) document.getElementsByClassName(ClassName2)[numInd2].style.top = 0
+	 else document.getElementsByClassName(ClassName2)[numInd2].style.top = ((50/100)*heightDiv) - (heightP/2)  + 'px';
 }
 
 function insertSign(numberIdTagP,numberIdTagDiv){
@@ -183,7 +183,7 @@ function insertSign(numberIdTagP,numberIdTagDiv){
   fieldP.style.lineHeight = realSizeFont+'px';
   fieldP.style.position = 'relative';
   fieldP.style.margin = 0;
-  middleOfElement(numberIdTagP);
+  middleOfElement('field','circle',numberIdTagDiv,numberIdTagP);
   console.log(realSizeFont);
 }
 
