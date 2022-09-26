@@ -16,7 +16,7 @@ div.options-of-game {
     text-align: center;
     vertical-align: middle;
     font-size: xxx-large;
-    font-family: cursive;
+    font-family: 'Times New Roman', Arial;
     top: 50%;
 }
 div.containerform {
@@ -27,7 +27,7 @@ div.containerform {
     position: absolute;
     visibility: hidden;
     z-index: 1;
-    top: 5.6%;
+    top: 8.6%;
 }
 div.elementsform {
     width: 100%;
@@ -72,7 +72,7 @@ input[type=submit]{
    border: solid 3px #000000;
    color: #000000;
    width: 50%;
-   height: auto;
+   height: 8.6%;
    white-space: pre-line;
    font-size: xx-large;
    display: inline;
@@ -82,7 +82,6 @@ input[type=submit]{
 div.buttons{
   width: 100%;
   height: auto;
-  background-color: brown;
   position: relative;
 }
 form{
@@ -121,6 +120,6 @@ div.gameover{
    justify-content: center;
    align-items: center;
    font-size: xxx-large;
-   font-family: cursive;
+   font-family: 'Times New Roman', Arial;
    visibility: hidden;
 }
