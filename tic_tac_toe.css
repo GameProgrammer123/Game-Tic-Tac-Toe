@@ -20,13 +20,12 @@ div.options-of-game {
 }
 div.containerform {
    background-color: #1178d3;
-   width: 100%;
    text-align: center;
    height: auto;
    position: absolute;
    visibility: hidden;
    z-index: 1;
-   top: 8.6%;
+   right: 0;
 }
 div.elementsform {
     width: 100%;
@@ -72,7 +71,7 @@ input[type=submit]{
    border: solid 3px #000000;
    color: #000000;
    width: 50%;
-   height: 8.6%;
+   height: auto;
    white-space: pre-line;
    font-size: xx-large;
    display: inline;
