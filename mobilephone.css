@@ -98,6 +98,7 @@ div.descriptionSettingsGame{
    position: relative;
    text-align: center;
    z-index: -1;
+   float: left;
 }
 p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove{
    background-color: red;
