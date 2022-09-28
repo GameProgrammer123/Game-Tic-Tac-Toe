@@ -193,10 +193,10 @@ setTimeout(() => {
 	heightDiv = document.getElementById(1).clientHeight; */
 	for(var numberIdPTag = 0; numberIdPTag < nmax*nmax; ++numberIdPTag){
 	 var numberTagPID = 'p'+numberIdPTag;
-	 if(document.getElementById(numberIdPTag).textContent === O || document.getElementById(numberIdPTag).textContent === X){
+	 if(document.getElementById(numberIdPTag).textContent === O || document.getElementById(numberIdPTag).textContent === X)
 	  insertSign(numberTagPID,numberIdPTag);
-	 }
 	}
+	document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight;
 }, 1000);
 }
 
