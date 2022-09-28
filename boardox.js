@@ -197,8 +197,8 @@ setTimeout(() => {
 	  insertSign(numberTagPID,numberIdPTag);
 	}
 	console.log('Get hight: '+document.getElementsByClassName('button')[1].clientHeight);
-	document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight;
-	document.getElementsByClassName('button')[0].style.height = document.getElementsByClassName('button')[1].clientHeight;
+	document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 'px';
+	document.getElementsByClassName('button')[0].style.height = document.getElementsByClassName('button')[1].clientHeight + 'px';
 }, 1000);
 }
 
