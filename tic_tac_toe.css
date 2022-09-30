@@ -28,7 +28,7 @@ div.containerform {
     float: right;
     border: 1px solid #1ee9c2;
     width: max-content;
-    right: 2px;
+    right: 5px;
 }
 div.elementsform {
     width: 100%;
@@ -95,7 +95,7 @@ legend{
 }
 div.descriptionSettingsGame{
     width: 100%;
-    height: 100%;
+    height: -webkit-fill-available;
     background-color: green;
     position: absolute;
     text-align: center;
@@ -125,4 +125,7 @@ div.gameover{
     font-size: xxx-large;
     font-family: 'Times New Roman', Arial;
     visibility: hidden;
+}
+span.spandesc{
+  margin-left: 5%;
 }
