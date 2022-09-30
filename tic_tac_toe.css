@@ -98,7 +98,7 @@ div.descriptionSettingsGame{
     height: -webkit-fill-available;
     background-color: green;
     position: absolute;
-    text-align: center;
+    text-align: left;
     z-index: -1;
     border: 1px solid black; 
 }
