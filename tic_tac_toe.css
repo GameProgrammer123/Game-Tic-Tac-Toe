@@ -98,14 +98,14 @@ div.descriptionSettingsGame{
     height: -webkit-fill-available;
     background-color: green;
     position: absolute;
-    text-align: left;
+    text-align: center;
     z-index: -1;
     border: 1px solid black; 
 }
 p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove{
     background-color: red;
     font-size: x-large;
-    text-align: center;
+    text-align: left;
     width: 100%;
     height: auto;
     position: absolute;
