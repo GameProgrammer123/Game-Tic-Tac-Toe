@@ -128,3 +128,6 @@ div.gameover{
    font-family: 'Times New Roman', Arial;
    visibility: hidden;
 }
+span.spandesc{
+  margin-left: 5%;
+}
