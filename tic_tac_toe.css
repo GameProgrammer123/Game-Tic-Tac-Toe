@@ -112,6 +112,7 @@ p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove{
     display: flex;
     left: 0;
     margin-block-start: 10px;
+    margin-block-end: 10px; 
 }
 div.gameover{
     width: 48%;
