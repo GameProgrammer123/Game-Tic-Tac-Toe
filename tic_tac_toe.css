@@ -105,7 +105,6 @@ div.descriptionSettingsGame{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
 p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove{
     background-color: red;
