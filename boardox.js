@@ -201,7 +201,6 @@ setTimeout(() => {
 	  document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 6 + (window.innerHeight / 2) + 'px'
 	else document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 6 + 'px';
 	
-	document.getElementsByClassName('descriptionSettingsGame')[0].style.paddingTop = document.getElementsByClassName('button')[1].clientHeight + 16 + 'px';
 	document.getElementsByClassName('button')[0].style.height = document.getElementsByClassName('button')[1].clientHeight + 6 + 'px';
 }, 1000);
 }
