@@ -100,7 +100,8 @@ div.descriptionSettingsGame{
     position: absolute;
     text-align: center;
     z-index: -1;
-    border: 1px solid black; 
+    border: 1px solid black;
+    padding-top: 33.33%;
 }
 p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove{
     background-color: red;
