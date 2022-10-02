@@ -94,14 +94,17 @@ legend{
   font-size: xx-large;
 }
 div.descriptionSettingsGame{
-   width: 100%;
-   height: -webkit-fill-available;
-   background-color: green;
-   position: absolute;
-   text-align: center;
-   z-index: -1;
-   border: 1px solid black;
-   padding-top: 33.33%;
+    width: 100%;
+    height: -webkit-fill-available;
+    background-color: green;
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove{
    background-color: red;
