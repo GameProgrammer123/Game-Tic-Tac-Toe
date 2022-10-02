@@ -101,7 +101,11 @@ div.descriptionSettingsGame{
     text-align: center;
     z-index: -1;
     border: 1px solid black;
-    padding-top: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
 }
 p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove{
     background-color: red;
