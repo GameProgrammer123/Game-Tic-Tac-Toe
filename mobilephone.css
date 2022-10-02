@@ -22,7 +22,7 @@ div.options-of-game {
 div.containerform {
    background-color: #1178d3;
    text-align: center;
-   position: relative;
+   position: absolute;
    visibility: hidden;
    z-index: 1;
    display: flex;
