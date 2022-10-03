@@ -32,9 +32,9 @@ if (gameLevel === null) gameLevel = 'possible';
 <div class="gameover"></div>
 <div class="options-of-game" id="optionsgame">
 <div class="buttons">
-<input type="submit" name="playagain" class="button" value="Play again" style="font-size: x-large;" onclick="window.location.reload()" />
-<input type="submit" name="change settings" class="button" value="Change game settings" style="font-size: x-large;" onclick="if(document.getElementsByClassName('containerform')[0].style.visibility === 'hidden') document.getElementsByClassName('containerform')[0].style.visibility = 'visible'
-else document.getElementsByClassName('containerform')[0].style.visibility =  'hidden';" /></div>
+<button name="playagain" class="button" style="font-size: x-large;" onclick="window.location.reload()">Play again</button>
+<button name="changesettings" class="button" style="font-size: x-large;" onclick="if(document.getElementsByClassName('containerform')[0].style.visibility === 'hidden') document.getElementsByClassName('containerform')[0].style.visibility = 'visible'
+else document.getElementsByClassName('containerform')[0].style.visibility =  'hidden';">Change game settings</button></div>
 <div class="descriptionSettingsGame">Description settings game:<br>
 <div style="background-color: #1ddbd7; width: 100%; height: auto; position: relative;">
 <p class="singPlayer"><span class="spandesc">Player Mark: <script>document.write(O)</script></span></p>
