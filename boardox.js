@@ -1,6 +1,9 @@
 var
   edgespace, elemsquare, numsquare, realSizeFont, numberTagP = 0, widthDiv, heightDiv;
-  
+
+document.getElementById("maxNumberFields").value = nmax.toString();
+document.getElementById("level").value = gameLevel;
+
 for(var i = 0; i < nmax; ++i)
   for(var j = 0; j < nmax; ++j)
    gra[i][j] = null; 
