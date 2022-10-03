@@ -3,7 +3,7 @@ var
 
 document.getElementById("maxNumberFields").value = nmax.toString();
 document.getElementById("level").value = gameLevel;
-document.querySelector('input[name=sign][value=signPlayer]').checked = true;
+document.querySelector('input[name=sign][value='+signPlayer+']').checked = true;
 
 for(var i = 0; i < nmax; ++i)
   for(var j = 0; j < nmax; ++j)
