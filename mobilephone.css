@@ -68,7 +68,7 @@ fieldset{
 select{ 
   top: 2%;
 }
-input[type=submit]{ 
+input[type=submit], button { 
    background-color: orange; 
    background-position: 0px -401px; 
    border: solid 3px #000000;
