@@ -24,6 +24,8 @@ else if (signPlayer === 'cricle' ) { X = 'X'; O = 'O'; }
 var gameLevel = url.searchParams.get("level");
 console.log('gameLevel',gameLevel);
 if (gameLevel === null) gameLevel = 'possible';
+document.getElementById("maxNumberFields").value = "nmax.toString()";
+document.getElementById("level").value = "gameLevel";
 </script>
 <script type="text/javascript" src="engineox.js"></script>
 </head>
