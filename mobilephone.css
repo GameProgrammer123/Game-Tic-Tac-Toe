@@ -137,7 +137,10 @@ span.spandesc{
 }
 @media screen and (min-width: 480px) and (max-width: 1079px) {
  div.descriptionSettingsGame{
-   font-size: xx-large;
-   font-weight: medium;
+  font-size: 80px;
+  font-weight: bold; 
  }
+ p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove {
+   font-size: xxx-large;
+   }
 }
