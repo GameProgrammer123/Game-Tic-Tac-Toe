@@ -135,3 +135,9 @@ div.gameover{
 span.spandesc{
   margin-left: 5%;
 }
+@media screen and (max-width: 1045px) {
+ div.descriptionSettingsGame{
+   font-size: xx-large;
+   font-weight: lighter;
+ }
+}
