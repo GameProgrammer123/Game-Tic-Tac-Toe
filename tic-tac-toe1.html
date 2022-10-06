@@ -1,0 +1,76 @@
+<html>
+<head>
+<script type="text/javascript">
+window.addEventListener('resize', loadCss);
+function loadCss(){
+if(window.innerWidth >= window.innerHeight)
+ document.getElementsByTagName('head')[0].innerHTML = '<link rel="stylesheet" href="tic_tac_toe.css" />'
+else document.getElementsByTagName('head')[0].innerHTML = '<link rel="stylesheet" href="mobilephone.css" />';
+}
+loadCss();
+var url_string = window.location.href;
+console.log(url_string);
+var url = new URL(url_string);
+var nmax = parseInt(url.searchParams.get("maxNumberFields"));
+var startGame = url.searchParams.get("newGame");
+if(startGame === null) startGame = 'First start player';
+if(isNaN(nmax)) nmax = 3;
+var X, O;
+var signPlayer = url.searchParams.get("sign");
+// console.log('sinPlayer '+sinPlayer);
+if(signPlayer === null){ X = 'X'; O = 'O'; }
+else if (signPlayer === 'cricle' ) { X = 'X'; O = 'O'; }
+	 else { X = 'O'; O = 'X'; }
+var gameLevel = url.searchParams.get("level");
+console.log('gameLevel',gameLevel);
+if (gameLevel === null) gameLevel = 'possible';
+</script>
+<script type="text/javascript" src="engineox.js"></script>
+</head>
+<body>
+<div class="board-of-game" id="boardgame"></div>
+<div class="gameover"></div>
+<div class="options-of-game" id="optionsgame">
+<div class="buttons">
+<button name="playagain" class="button" style="font-size: x-large;" onclick="window.location.reload()">Play again</button>
+<button name="changesettings" class="button" style="font-size: x-large;" onclick="if(document.getElementsByClassName('containerform')[0].style.visibility === 'hidden') document.getElementsByClassName('containerform')[0].style.visibility = 'visible'
+else document.getElementsByClassName('containerform')[0].style.visibility =  'hidden';">Change game settings</button></div>
+<div class="descriptionSettingsGame">Description settings game:<br>
+<div style="background-color: #1ddbd7; width: 100%; height: auto; position: relative;">
+<p class="singPlayer"><span class="spandesc">Player Mark: <script>document.write(O)</script></span></p>
+<p class="singComputer"><span class="spandesc">Computer Mark: <script>document.write(X)</script></span></p>
+<p class="sizeBoard"><span class="spandesc">Board Size: <script>document.write(nmax)</script></span></p>
+<p class="gamelevel"><span class="spandesc">Game level: <script>document.write(gameLevel)</script></span></p>
+<p class="theFirstMove"><span class="spandesc">The first starts the game: <script>document.write(startGame)</script></span></p>
+</div>
+</div></div>
+<div class="containerform">
+<form action='tic-tac-toe.html'>
+<fieldset>
+<legend>Game settings form:</legend>
+<div class ="elementsform">
+<label for="sizeBoard">Choose the size of the board:</label>
+  <select name="maxNumberFields" id="maxNumberFields">
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select><br /><label for="playermark">Choose your mark:</label>
+<input type="radio" id="signcircle" name="sign" value="cricle" checked="checked">
+<label for="signcircle">O or</label>
+<input type="radio" id="signcross" name="sign" value="cross">
+<label for="signcross">X</label><br />
+<label for="level">Game level:</label>
+<select name="level" id="level">
+    <option value="possible">possible</option>
+    <option value="impossible">impossible</option>
+</select><br /><div style="display: inline-flex;">
+<input type="submit" name="newGame" value="First start player" style="height: auto;">
+<input type="submit" name="newGame" value="First start computer"></div>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+<script type="text/javascript" src="boardox.js"></script>
+</body>
+</html>
