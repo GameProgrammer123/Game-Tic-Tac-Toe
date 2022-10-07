@@ -18,6 +18,7 @@ div.options-of-game {
     font-size: xxx-large;
     font-family: 'Times New Roman', Arial;
     bottom: 1%;
+    display: table;
 }
 div.containerform {
    background-color: #1178d3;
@@ -25,11 +26,9 @@ div.containerform {
    position: absolute;
    visibility: hidden;
    z-index: 1;
-   display: flex;
-   float: right;
+   display: block;
    border: 1px solid #1ee9c2;
-   width: max-content;
-   right: 5px; 
+   right: 13px; 
 }
 div.elementsform {
     width: 100%;
@@ -74,7 +73,6 @@ input[type=submit], button {
    border: solid 3px #000000;
    color: #000000;
    width: 50%;
-   height: 8.6%;
    white-space: pre-line;
    font-size: xx-large;
    display: inline;
@@ -85,6 +83,7 @@ div.buttons{
   width: 100%;
   height: auto;
   position: relative;
+  display: table-header-group;
 }
 form{
   height: 100%;
@@ -97,14 +96,12 @@ div.descriptionSettingsGame{
     width: 100%;
     height: -webkit-fill-available;
     background-color: green;
-    position: absolute;
+    position: relative;
     text-align: center;
     z-index: -1;
     border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: table-cell;
+    vertical-align: middle; 
 }
 p.singPlayer, p.singComputer, p.sizeBoard, p.gamelevel, p.theFirstMove{
    background-color: red;
