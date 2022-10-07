@@ -206,7 +206,10 @@ setTimeout(() => {
 	  document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 16 + (window.innerHeight / 2) + 'px';
 	  document.getElementsByClassName('button')[0].style.fontSize =	'xxx-large';
 	  document.getElementsByClassName('button')[1].style.fontSize =	'xxx-large';
-	} else document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 16 + 'px';
+	} else { document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 16 + 'px';
+		 document.getElementsByClassName('button')[0].style.fontSize =	'xx-large';
+	  	 document.getElementsByClassName('button')[1].style.fontSize =	'xx-large';
+	  }
 	
 	document.getElementsByClassName('button')[0].style.height = document.getElementsByClassName('button')[1].clientHeight + 6 + 'px';
 }, 1000);
