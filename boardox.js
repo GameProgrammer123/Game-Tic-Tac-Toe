@@ -202,19 +202,9 @@ setTimeout(() => {
 	  insertSign(numberTagPID,numberIdPTag);
 	}
 	
-	if(window.innerWidth < window.innerHeight){
-	  /* document.getElementsByClassName('button')[0].style.top = 0;
-	  document.getElementsByClassName('button')[1].style.top = 0;
-	  document.getElementsByClassName('button')[0].style.fontSize =	'xxx-large';
-	  document.getElementsByClassName('button')[1].style.fontSize =	'xxx-large'; */
-	  document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 16 + (window.innerHeight / 2) + 'px';
-	} else { 
-		 /* document.getElementsByClassName('button')[0].style.top = 0;
-		 document.getElementsByClassName('button')[1].style.top = 0;
-		 document.getElementsByClassName('button')[0].style.fontSize =	'xx-large';
-	  	 document.getElementsByClassName('button')[1].style.fontSize =	'xx-large'; */
-		 document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 16 + 'px';
-	  }
+	if(window.innerWidth < window.innerHeight)
+	  document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 16 + (window.innerHeight / 2) + 'px'
+	else document.getElementsByClassName('containerform')[0].style.top = document.getElementsByClassName('button')[1].clientHeight + 16 + 'px';
 	
 	document.getElementsByClassName('button')[0].style.height = document.getElementsByClassName('button')[1].clientHeight + 6 + 'px';
 }, 1000);
