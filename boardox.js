@@ -34,8 +34,8 @@ function graphicWin(){
 			document.getElementById(numberField).style.color = 'red';
 			setTimeout(function(){
 			document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
-			if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON COMPUTER !!!</span></p>';
-			if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON PLAYER !!!</span></p>';
+			if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>COMPUTER WON !!!</span></p>';
+			if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>PLAYER WON !!!</span></p>';
 			document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},1000);
 			}
 		   } else if (nr_kolumny === wj && nr_wiersza === null){
@@ -45,8 +45,8 @@ function graphicWin(){
 			        document.getElementById(numberField).style.color = 'red';
 					setTimeout(function(){
 					document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
-					if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON COMPUTER !!!</span></p>';
-					if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON PLAYER !!!</span></p>';
+					if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>COMPUTER WON !!!</span></p>';
+					if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>PLAYER WON !!!</span></p>';
 					document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},1000);
 					}
 		          }
@@ -69,8 +69,8 @@ function graphicWin(){
 	    document.getElementById(numberField).style.color = 'red';
 		setTimeout(function(){
 		document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
-		if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON COMPUTER !!!</span></p>';
-		if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON PLAYER !!!</span></p>';
+		if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>COMPUTER WON !!!</span></p>';
+		if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>PLAYER WON !!!</span></p>';
 		document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},1000);
 	   } else if (nr_wiersza === nmax && nr_kolumny === -1){
 			   // alert('/');
@@ -80,8 +80,8 @@ function graphicWin(){
 				  document.getElementById(numberField).style.color = 'red';
 				  setTimeout(function(){
 				  document.getElementsByClassName('gameover')[0].style.visibility = 'visible';
-				  if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON COMPUTER !!!</span></p>';
-				  if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>WON PLAYER !!!</span></p>';
+				  if(Wyg(gra,X)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>COMPUTER WON !!!</span></p>';
+				  if(Wyg(gra,O)) document.getElementsByClassName('gameover')[0].innerHTML = '<p style="display: grid"><span>GAME OVER !!!</span><span>PLAYER WON !!!</span></p>';
 				  document.getElementsByClassName('board-of-game')[0].style.opacity = '0.5';},1000);
 		       // }
 	          }
