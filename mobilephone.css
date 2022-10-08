@@ -79,6 +79,10 @@ input[type=submit], button {
    position: relative;
    float: left;
 }
+button {
+  font-size: xxx-large;
+  font-weight: bold;
+}
 div.buttons{
   width: 100%;
   height: auto;
